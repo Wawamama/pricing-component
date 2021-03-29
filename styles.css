@@ -18,10 +18,12 @@
     --lightgrayishblue: hsl(224, 65%, 95%);
     --lightergrayishblue: hsl(223, 50%, 87%);
     --darkblue: hsl(227, 35%, 25%); 
-
-
 }
+
 body {
     font-size: 15px;
     font-family: 'Manrope', sans-serif;
+    background-color: var(--verypaleblue);
+    background-image: url(img/bg-pattern.svg);
+    background-repeat: no-repeat;
 }

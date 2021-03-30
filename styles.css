@@ -14,7 +14,7 @@
     --lightred: hsl(15, 100%, 70%);
     --paleblue: hsl(226, 100%, 87%);
     --verypaleblue: hsl(230, 100%, 99%);
-    --white: hsl (0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
     --lightgrayishblue: hsl(224, 65%, 95%);
     --lightergrayishblue: hsl(223, 50%, 87%);
     --darkblue: hsl(227, 35%, 25%); 
@@ -26,4 +26,60 @@ body {
     background-color: var(--verypaleblue);
     background-image: url(img/bg-pattern.svg);
     background-repeat: no-repeat;
+}
+
+main {
+    width: 90vw;
+    margin: 10vh auto;
+    text-align: center;
+}
+
+@media only screen and (min-width: 960px) {
+    main {
+        width: 60vw;
+        max-width: 500px;
+    }
+}
+
+/* Button style */
+
+.btn {
+    outline: none;
+    background-color: var(--darkblue);
+    color: var(--paleblue);
+    padding: 12px 40px;
+    border-style: none;
+    font-size: 0.8em;
+    letter-spacing: 1.2px;
+    position: relative;
+    border-radius: 50px;
+    
+}
+
+
+/* TOP STYLES */
+
+#top {
+    background: url(img/pattern-circles.svg) center no-repeat;
+    min-height: 160px;
+}
+
+#top h1 {
+    padding-top: 50px;
+    color: var(--darkblue);
+    font-size: 1.8em;
+}
+
+#top p {
+    padding-top: 10px;
+    color: var(--grayishblue);
+    font-weight: 600;
+}
+
+/* CONTAINER STYLES */
+
+#container {
+   background-color: var(--white);
+   border-radius: 10px;
+   box-shadow: 10px 10px 50px 10px hsl(228, 43%, 93%);
 }

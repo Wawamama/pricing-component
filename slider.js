@@ -3,6 +3,8 @@ let price = document.querySelector('.price');
 let pageviews = document.querySelector('.nb_pageviews');
 let yearlyBilling = false;
 let checkbox = document.querySelector("#billing_recurrence");
+let dynamicPrice = '16.00';
+let discountPrice = parseFloat(dynamicPrice) * 0.75;
 
 checkbox.addEventListener('change', function() {
     if (this.checked) {
@@ -12,16 +14,49 @@ checkbox.addEventListener('change', function() {
     }
   });
 
-
 checkbox.addEventListener('change', function() {
   if (this.checked) {
-    console.log("Checkbox is checked..");
+    yearlyBilling = true;
+    let discountPrice = parseFloat(dynamicPrice) * 0.75;
+    price.innerHTML = `$${discountPrice}.00`;
   } else {
-    console.log("Checkbox is not checked..");
+    yearlyBilling = false
+    price.innerHTML = `$${dynamicPrice}`;
   }
 });
-const showPrice = (newPrice) => {
 
-    price.innerHTML = newPrice;
+const showPrice = (newPrice) => {
+  
+    if (newPrice < 200) {
+      dynamicPrice = '8.00';
+      discountPrice = parseFloat(dynamicPrice) * 0.75;
+      pageviews.innerHTML = '10K PAGEVIEWS'
+    }
+    else if (newPrice >=200 && newPrice < 400) {
+      dynamicPrice = '12.00';
+      discountPrice = parseFloat(dynamicPrice) * 0.75;
+      pageviews.innerHTML = '50K PAGEVIEWS'
+    }
+    else if (newPrice >=400 && newPrice < 600) {
+      dynamicPrice = '16.00';
+      discountPrice = parseFloat(dynamicPrice) * 0.75;
+      pageviews.innerHTML = '100K PAGEVIEWS'
+    }
+    else if (newPrice >=600 && newPrice < 800) {
+      dynamicPrice = '24.00';
+      discountPrice = parseFloat(dynamicPrice) * 0.75;
+      pageviews.innerHTML = '500K PAGEVIEWS'
+    }
+    else if (newPrice >=800) {
+      dynamicPrice = '36.00';
+      discountPrice = parseFloat(dynamicPrice) * 0.75;
+      pageviews.innerHTML = '1M PAGEVIEWS'
+    }
+   
+    if (!yearlyBilling) {
+      price.innerHTML = `$${dynamicPrice}`;
+    } else {
+      price.innerHTML = `$${discountPrice}.00`
+    }
     
 }

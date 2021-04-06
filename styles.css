@@ -39,23 +39,42 @@ main {
         width: 60vw;
         max-width: 600px;
     }
+
+    .nb_pageviews {
+        text-align: left;
+        margin-left: 5%;
+        width: 30%;
+    }
+
+    .pricing_container {
+        position: absolute;
+        top:10%;
+        right: 20%;
+        
+       
+    }
 }
 
+li {
+    list-style: none;
+    line-height: 3.5vh;
+}
 /* Button style */
 
 .btn {
     outline: none;
     background-color: var(--darkblue);
     color: var(--paleblue);
-    padding: 12px 40px;
+    padding: 12px;
     border-style: none;
     font-size: 0.8em;
     letter-spacing: 1.2px;
     position: relative;
     border-radius: 50px;
     cursor: pointer;
+    height: 40px;
+    width: 160px;
 }
-
 
 /* TOP STYLES */
 
@@ -79,11 +98,13 @@ main {
 /* CONTAINER STYLES */
 
 #container {
+   position: relative;
    background-color: var(--white);
    border-radius: 10px;
    box-shadow: 10px 10px 50px 10px hsl(228, 43%, 93%);
    padding: 3em 2em;
    color: var(--grayishblue);
+   margin-top: 5vh;
 }
 
 
@@ -100,21 +121,21 @@ main {
 
 .price {
     color: var(--darkblue);
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold; 
     margin-right: 10px;
 }
 
 .recurrence {
    position: absolute;
-   bottom:20%;
+   bottom:25%;
 }
 
 /* SLIDER STYLES */
 
 .slidebar_container {
     width: 90%;
-    margin: 30px auto;
+    margin: 8vh auto;
 }
 
 input[type='range'] {
@@ -293,3 +314,30 @@ input[type=range]::-webkit-slider-thumb {
       border-radius: 20px;
       padding: 4px;
   }
+
+  /* BOTTOM */
+
+  .line_separator {
+      height: 2px;
+      width: 100%;
+      background-color:var(--verypaleblue);
+      position: absolute;
+      left: 0;
+  }
+
+#bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 4vh;
+}
+
+@media only screen and (min-width: 960px) {
+    #bottom ul {
+        text-align: left;
+    }
+
+    #bottom > :nth-child(2) {
+        align-self: center;
+    }
+}

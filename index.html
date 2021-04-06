@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="slidebar_container">
-            <input id="range" type="range" min="0" max="1000" step="5" value="500">
+            <input id="range" type="range" min="0" max="1000" step="5" value="500" onchange="showPrice(this.value)" oninput="showPrice(this.value)">
         </div>
        
         
@@ -32,7 +32,7 @@
         <div class="choose_recurrence">
             <span>Monthly Billing &nbsp;&nbsp;</span>
             <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" id="billing_recurrence">
                 <span class='switch_slider'></span>
             </label>
             <span>&nbsp;&nbsp;Yearly Billing</span>
@@ -52,5 +52,6 @@
 
     </div>
 </main>
+<script type="text/javascript" src="slider.js"></script>
 </body>
 </html>

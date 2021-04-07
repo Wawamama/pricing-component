@@ -28,7 +28,6 @@ checkbox.addEventListener('change', function() {
 
 /* slider price modifier */
 const showPrice = (newPrice) => {
-    // change background gradient
     
     // change price and pageviews
     if (newPrice < 200) {
